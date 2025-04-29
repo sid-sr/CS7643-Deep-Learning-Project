@@ -8,12 +8,14 @@ All dependencies (including datasets) are self-contained as pip installations an
 
 The `draftandverify` folder uses the official implementaion of the Draft and Verify authors: https://github.com/dilab-zju/self-speculative-decoding/tree/main.
 
-### For Method 1 (DV + LayerSkip)
+The run_laco.ipynb uses parts of the official implementation of the LayerCollapse authors: https://github.com/yangyifei729/LaCo
+
+### For Method 1 (Draft and Verify + LayerSkip)
 
 1. Run bayesian_search.ipynb to obtain Draft and Verify pruned models (which are pushed to HuggingFace).
 2. Run dv_summarisation to obtain benchmarking metrics on ROUGE-2 and inference speedup on CNN/DM.
 
-### For Method 1 (LaCo + LayerSkip)
+### For Method 2 (LaCo + LayerSkip)
 
 1. Run run_laco.ipynb to obtain LaCo pruned models (pushed to HuggingFace).
 2. Run laco_recovery_finetuning with Tensorboard open for analysing recovery performance.
